@@ -152,6 +152,56 @@ nav a.active {
     transform: scale(1.1);
     box-shadow: 0 0 20px #00ffff;
 }
+
+.typing-text{
+font-size: 34px;
+font-weight: 600;
+min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Engineer";
+    color: #00ffff;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: calc(-100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid #00ffff;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: "Web Developer";
+    }
+    21%,40%{
+        content: "Software Engineering";
+    }
+    41%,60%{
+        content: "Web Designer";
+    }
+    61%,80%{
+        content: "Gamers";
+    }
+    81%,100%{
+        content: "Agnes Jelita's Boyfriend";
+    }
+}
 /* ===== ABOUT ME ===== */
 .about-me {
     min-height: 100vh;
@@ -245,8 +295,8 @@ nav a.active {
 
 /* PAGE TRANSITION */
 .page-transition {
-    opacity: 1;
-    animation: fadeIn 0.9s ease forwards;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -258,7 +308,7 @@ nav a.active {
 /* FADE OUT */
 .fade-out {
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transition: opacity 0.4s ease;
 }
 
 
@@ -291,6 +341,7 @@ nav a.active {
 
     nav a {
         display: block;
+        border-bottom: 1px solid #00ffff;
         margin: 2rem 0;
         font-size: 2rem;
     }
@@ -319,4 +370,3 @@ nav a.active {
 #menu-icon {
     display:block;
 }
-
