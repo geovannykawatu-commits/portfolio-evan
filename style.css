@@ -245,8 +245,8 @@ nav a.active {
 
 /* PAGE TRANSITION */
 .page-transition {
-    opacity: 0;
-    animation: fadeIn 0.6s ease forwards;
+    opacity: 1;
+    animation: fadeIn 0.9s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -258,7 +258,7 @@ nav a.active {
 /* FADE OUT */
 .fade-out {
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.7s ease;
 }
 
 
@@ -319,3 +319,4 @@ nav a.active {
 #menu-icon {
     display:block;
 }
+
