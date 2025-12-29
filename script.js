@@ -98,3 +98,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// PAGE TRANSITION
+document.querySelectorAll("a").forEach(link => {
+    if (link.hostname === window.location.hostname) {
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+
+            if (!href || href.startsWith("#")) return;
+
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 400);
+        });
+    }
+});
